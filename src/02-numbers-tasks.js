@@ -207,13 +207,14 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-function isPrime(n) {
-  const start = 2;
-  const limit = Math.sqrt(n);
-  for (let i = start; i <= limit; i + 1) {
-    if (n % i === 0) return false;
-  }
-  return n > 1;
+function isPrime(/* n */) {
+  throw new Error('Not implemented');
+  // const start = 2;
+  // const limit = Math.sqrt(n);
+  // for (let i = start; i <= limit; i + 1) {
+  //   if (n % i === 0) return false;
+  // }
+  // return n > 1;
 }
 
 /**
