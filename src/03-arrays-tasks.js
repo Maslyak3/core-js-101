@@ -248,9 +248,11 @@ function toArrayOfSquares(arr) {
  *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0]
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
-function getMovingSum(arr) {
-  let sum = 0;
-  return arr.map((num) => (sum += num));
+function getMovingSum(/* arr */) {
+  throw new Error('Not implemented');
+  // let sum = 0;
+  // arr.map((num) => (sum += num));
+  // return arr;
 }
 
 /**
@@ -301,11 +303,7 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(arr) {
-  const newArray = [];
-  for (let i = 0; i <= 3; i += 1); {
-    newArray.push(Math.max(arr));
-    arr.splice(Math.max(arr));
-  }
+  return arr.sort().reverse().slice(0, 3);
 }
 
 
@@ -356,7 +354,7 @@ function sortDigitNamesByNumericOrder(arr) {
     'six',
     'seven',
     'eight',
-    'nine'
+    'nine',
   ];
 
   return arr.sort((a, b) => digitMap.indexOf(a) - digitMap.indexOf(b));
@@ -637,6 +635,5 @@ module.exports = {
   selectMany,
   getElementByIndexes,
   swapHeadAndTail,
+
 };
-
-
